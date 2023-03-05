@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Fredoka+One&family=Rampart+One&display=swap');
+
+.card-container{   
+    font-family: 'Handlee', cursive, "Apple SD Gothic Neo", arial;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    transform: translate3d(-50%, -50%, 0) rotateY(0deg);
+    transform-style: preserve-3d;
+    perspective: 800px;
+    z-index: 100;
+    
+    .front{
+        position: relative;
+        width: 400px;
+        height: 250px;
+
+        transform: rotateX(-179deg) translate3d(0px, 0px, 10px);
+        transform-origin: bottom center;
+        transform-style: preserve-3d;
+        perspective: 800px;
+        border-radius: 10px 10px 0 0;
+        backface-visibility: hidden;
+
+        .prev{
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotateX(-180deg) translate(0px, 0px);
+            background-color: #74eb98;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .next{
+            position: absolute;
+            transform-style: preserve-3d;
+            background-color: rgb(214, 114, 114);
+            width: 100%;
+            height: 100%;
+            perspective: 800px;
+            backface-visibility: hidden;
+        }
+        .balloon-card{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("~/public/images/balloons.png") center top / 200px no-repeat;
+            transform: translate3d(-100px, -40px, 30px);
+            backface-visibility: hidden;
+        }
+        .cake-card{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("~/public/images/cake.png") center top / 200px no-repeat;
+            transform: translate3d(100px, 150px, 50px);
+            backface-visibility: hidden;
+        }
+        .gift-card{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("~/public/images/gift.png") center top / 100px no-repeat;
+            transform: translate3d(-50px, 190px, 30px);
+            backface-visibility: hidden;
+        }
+    }
+
+    .bottom{
+        position: relative;
+        width: 400px;
+        height: 250px;
+        background-color: #fff;
+
+        transform: rotateX(0deg) translateZ(-10px);
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+        backface-visibility: hidden;
+
+        .message{
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            h1{
+                top: 20%;
+                width: 100%;
+                text-align: left;
+            }
+            h3{
+                bottom: 0%;
+                width: 100%;
+                text-align: right;
+            }
+            p{
+                font-family: 'Dongle', sans-serif;
+                font-size: 1.5rem;
+                top: 40%;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+}

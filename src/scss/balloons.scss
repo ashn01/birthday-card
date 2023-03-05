@@ -1,0 +1,35 @@
+.balloons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color
+{
+  fill: var(--color, black);
+}
+
+#svg
+{
+  position: absolute;
+  overflow: visible;
+  top: 0;
+  left: 0;
+}
+
+#content
+{
+  text-align: center;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+.balloon
+{
+  cursor: pointer;
+}
+
+#behind_svg { z-index: 1; }
+#content { z-index: 2; }
+#svg{ z-index: 3; }

@@ -1,0 +1,18 @@
+
+
+.tops {
+    top: -20vh;
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    z-index: 10;
+    perspective: 800px;
+    .word{
+        top: -100px;
+        width: 100px;
+        height: 100px;
+        font-size: 5rem;
+        display: inline-block;
+        font-family: 'Fredoka One', cursive;
+    }
+}

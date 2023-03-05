@@ -11,6 +11,7 @@ export default function Home() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [width, setWidth] = useState<number>(window.innerWidth);
     const [height, setHeight] = useState<number>(window.innerHeight);
+    const [backgroundColor] = useState<Array<string>>(["#ffdede", "#efdeff", "#deffde", "#dedeff","#ffffde"]);
 
     const balloonsRef = useRef<HTMLDivElement>(null);
     const particlesRef = useRef<HTMLDivElement>(null);
@@ -41,6 +42,7 @@ export default function Home() {
             console.log(isOpen);
             // topEffect();
             createParticles();
+            backgroundEffect();
         }
     }, [isOpen])
 
@@ -119,8 +121,23 @@ export default function Home() {
         }
     }
 
+    const backgroundEffect = () =>{
+        let timeline = gsap.timeline({repeat: -1});
+        timeline.to(".home", {
+            backgroundColor: backgroundColor[0]
+        }).to(".home", {
+            backgroundColor: backgroundColor[1]
+        }).to(".home", {
+            backgroundColor: backgroundColor[2]
+        }).to(".home", {
+            backgroundColor: backgroundColor[3]
+        }).to(".home", {
+            backgroundColor: backgroundColor[4]
+        })
+    }
+
     return (
-        <div className="home">
+        <div className={`home`}>
             <Top isOpen={isOpen}/>
             <Card setOpen={() => setIsOpen(true)} />
             <Balloons width={width} height={height} />

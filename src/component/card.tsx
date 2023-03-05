@@ -90,7 +90,9 @@ export default function Card(props:{setOpen:()=>void}) {
     return (
         <div className="card-container" onClick={onClickCard} ref={cardRef}>
             <div className="front">
-                <div className="prev"></div>
+                <div className="prev">
+                    <div className="prev-button"></div>
+                </div>
                 <div className="next"></div>
                 <div className="balloon-card"></div>
                 <div className="cake-card"></div>
